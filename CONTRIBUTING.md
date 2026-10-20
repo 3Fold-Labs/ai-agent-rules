@@ -15,6 +15,8 @@ npx playwright install chromium   # for the browser tests; or set PW_CHROMIUM_PA
 
 - `src/core/`: the release version (`version.mjs`), both tracks' questions, answer handling, and the Markdown policies (`questionnaire.mjs`), and the coding tool settings compiler (`compiler.mjs`). The tests import these modules directly.
 - `src/app/`: the page itself, one module per job, grouped by area of the page. `main.mjs` starts the page and connects every control to its feature, `router.mjs` opens the start page or a track, and `render.mjs` redraws the open track when its answers change. The folders hold the helpers (`lib/`), saved data (`store/`), the frame around the worksheet (`page/`), answering (`worksheet/`), checking before download (`review/`), the Builder tool panel (`tool-settings/`), and downloads and clearing (`export/`).
+- `plugin/`: the local stdio MCP server, the demo command, and the Codex MCP config. It imports `src/core` and does not bundle into the page. It makes no network calls.
+- `skills/`, `rules/`, and the manifest folders (`.claude-plugin/`, `.cursor-plugin/`, `.codex-plugin/`, `.agents/plugins/`, `mcp.json`, `gemini-extension.json`): thin install files for Claude Code, Cursor, Codex, and Gemini CLI. See [docs/plugins.md](./docs/plugins.md).
 - `src/page.html`, `src/styles/`, `src/assets/`, `src/initial-theme.js`: the markup template, styles, logo, and the script that applies the theme before the page paints.
 - `scripts/build.mjs`: bundles `src/` with esbuild into `index.html`.
 - `test/`: unit tests. `e2e/`: browser tests.

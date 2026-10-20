@@ -1,0 +1,27 @@
+{
+  "name": "ai-agent-rules",
+  "version": "0.0.7",
+  "description": "Answer 100 permission questions and compile local coding-tool settings. Free, on your machine, with no network calls.",
+  "author": {
+    "name": "3Fold Labs, LLC",
+    "url": "https://github.com/3Fold-Labs/ai-agent-rules"
+  },
+  "homepage": "https://3fold-labs.github.io/ai-agent-rules/",
+  "repository": "https://github.com/3Fold-Labs/ai-agent-rules",
+  "license": "MIT",
+  "keywords": ["permissions", "policy", "agents", "local"],
+  "skills": "./skills/",
+  "mcpServers": "./plugin/codex-mcp.json",
+  "interface": {
+    "displayName": "100-Question AI Agent Setup",
+    "shortDescription": "100 permission questions, compiled on your machine.",
+    "longDescription": "Walk through the Builder or Personal track and write a local policy. Builder answers also become settings files for Claude Code, Codex, Gemini CLI, and Cursor. Cursor's file is guidance only. The server makes no network calls.",
+    "developerName": "3Fold Labs, LLC",
+    "category": "Productivity",
+    "websiteURL": "https://3fold-labs.github.io/ai-agent-rules/",
+    "defaultPrompt": [
+      "Walk me through the Builder track, one section at a time.",
+      "Compile the demo answers and show me the settings files."
+    ]
+  }
+}

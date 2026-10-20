@@ -9,7 +9,8 @@
     "e2e": "playwright test",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "plugin:demo": "node plugin/cli.mjs demo"
   },
   "version": "0.0.7",
   "devDependencies": {

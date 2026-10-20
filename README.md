@@ -90,6 +90,30 @@ Beside each policy the page shows its size and a rough estimate of its tokens: "
 
 On the Personal track, rules stay as instructions, because everyday assistants do not accept permission files.
 
+## Install the local plugin
+
+The same worksheet can run as a free local plugin inside Claude Code, Cursor, Codex, and Gemini CLI. It asks the questions in chat and compiles the same policy and coding tool settings. It makes no network calls. The browser worksheet is still the primary way to use this, and it still needs no plugin, account, or key.
+
+You need Node.js. There is nothing to install from a package registry. Full steps, including a manual MCP setup that works in any stdio client, are in [docs/plugins.md](./docs/plugins.md).
+
+Try the built-in demo before you answer the 100 questions. From a checkout of this repository:
+
+```bash
+node plugin/cli.mjs demo --out /tmp/ai-agent-rules-demo
+```
+
+That writes a demo policy and the four tools' settings files. They are a sample, not your policy. Pass `--track personal` for the Personal track, which writes a policy and no tool files.
+
+| Tool           | Install from a checkout                                                                                          |
+| -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Claude Code    | `claude plugin marketplace add .` then `claude plugin install ai-agent-rules@ai-agent-rules`                     |
+| Cursor         | Clone or copy this repository to `~/.cursor/plugins/local/ai-agent-rules`, then reload Cursor                    |
+| Codex          | `codex plugin marketplace add .` then install **ai-agent-rules** from `/plugins`                                 |
+| Gemini CLI     | `gemini extensions link .`                                                                                       |
+| Any MCP client | `node plugin/server.mjs` on stdio. See [docs/plugins.md](./docs/plugins.md) for the exact command for each tool. |
+
+In Claude Code, Cursor, or Codex, the setup skill walks through the questions. It is `/ai-agent-rules:setup` in Claude Code. Unanswered questions grant nothing. Tool settings are a guardrail, not a lock. Cursor's file is guidance only.
+
 ## What each download is
 
 | File                                                                                                                                    | What it is                                                                                                                                                                                                                                                                                 |
@@ -151,6 +175,16 @@ src/app/export/             policy, answers file, blank worksheet, unreadable da
 scripts/build.mjs           bundles src/ with esbuild into index.html (--check verifies that it is current)
 test/                       unit tests (node --test), including the module layer and import cycle checks
 e2e/                        browser tests (Playwright)
+plugin/                     local stdio MCP server and demo command (imports src/core, no network)
+skills/setup/SKILL.md       chat walkthrough used by Claude Code, Cursor, and Codex
+rules/ai-agent-rules.mdc    Cursor rule for the walkthrough
+.claude-plugin/             Claude Code plugin and marketplace manifests
+.cursor-plugin/plugin.json  Cursor plugin manifest
+.codex-plugin/plugin.json   Codex plugin manifest
+.agents/plugins/            Codex marketplace manifest
+mcp.json                    Cursor plugin MCP config
+gemini-extension.json       Gemini CLI extension manifest
+docs/plugins.md             install and try steps for each tool
 ```
 
 ## Disclaimer

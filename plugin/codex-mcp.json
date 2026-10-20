@@ -1,0 +1,6 @@
+{
+  "ai-agent-rules": {
+    "command": "node",
+    "args": ["${CLAUDE_PLUGIN_ROOT}/plugin/server.mjs"]
+  }
+}

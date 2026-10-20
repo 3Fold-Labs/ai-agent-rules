@@ -1,0 +1,10 @@
+---
+description: How to set AI agent permissions with the 100-question worksheet. Use when the user asks what an agent may do, or wants Claude Code, Codex, Gemini CLI, or Cursor permission files.
+alwaysApply: false
+---
+
+When the user wants to decide what an AI agent may do, use the setup skill and the local ai-agent-rules tools. Choices are ALLOW, ASK, DENY, or Doesn't apply. Unanswered questions grant nothing.
+
+Tool settings are a strong guardrail, not a lock. The Cursor file is guidance only. Cursor applies these instructions only in Auto-review mode and does not treat them as security. The plain-English policy still applies.
+
+Do not send the user's answers over the network.

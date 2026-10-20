@@ -8,3 +8,5 @@ src/core/questionnaire.mjs
 node_modules/
 package-lock.json
 .local/
+# Exact compiler output for the plugin demo. Prettier must not rewrap these bytes.
+test/fixtures/plugin/

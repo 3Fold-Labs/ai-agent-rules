@@ -1,0 +1,20 @@
+{
+  "name": "ai-agent-rules",
+  "displayName": "100-Question AI Agent Setup",
+  "description": "Answer 100 permission questions and compile local coding-tool settings. Free, on your machine, with no network calls.",
+  "version": "0.0.7",
+  "author": {
+    "name": "3Fold Labs, LLC",
+    "url": "https://github.com/3Fold-Labs/ai-agent-rules"
+  },
+  "homepage": "https://3fold-labs.github.io/ai-agent-rules/",
+  "repository": "https://github.com/3Fold-Labs/ai-agent-rules",
+  "license": "MIT",
+  "keywords": ["permissions", "policy", "agents", "local"],
+  "mcpServers": {
+    "ai-agent-rules": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/plugin/server.mjs"]
+    }
+  }
+}

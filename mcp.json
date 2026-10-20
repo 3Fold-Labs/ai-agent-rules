@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ai-agent-rules": {
+      "command": "node",
+      "args": ["${CURSOR_PLUGIN_ROOT}/plugin/server.mjs"]
+    }
+  }
+}

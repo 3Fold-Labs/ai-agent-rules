@@ -1,0 +1,12 @@
+{
+  "name": "ai-agent-rules",
+  "version": "0.0.7",
+  "description": "Answer 100 permission questions and compile local coding-tool settings. Free, on your machine, with no network calls.",
+  "mcpServers": {
+    "ai-agent-rules": {
+      "command": "node",
+      "args": ["${extensionPath}/plugin/server.mjs"],
+      "cwd": "${extensionPath}"
+    }
+  }
+}

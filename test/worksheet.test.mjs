@@ -1142,7 +1142,7 @@ test('the validate workflow installs dependencies, then lints, checks formatting
 });
 
 test('documentation describes only the current product', () => {
-  for (const name of ['README.md', 'RELEASE-NOTES.md', 'CONTRIBUTING.md']) {
+  for (const name of ['README.md', 'RELEASE-NOTES.md', 'CONTRIBUTING.md', 'docs/plugins.md']) {
     const text = read(name);
     for (const term of PAST_TERMS) assert(!term.test(text), `${name} matches ${term}`);
   }
@@ -1152,6 +1152,7 @@ test('documentation describes only the current product', () => {
     'RELEASE-NOTES.md',
     'AGENTS.md',
     'CONTRIBUTING.md',
+    'docs/plugins.md',
     '.github/workflows/pages.yml',
     '.github/workflows/test.yml'
   ]) {

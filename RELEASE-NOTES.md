@@ -9,6 +9,8 @@ Set the boundaries for your AI agents in one place. Choose a track, answer 100 q
 
 **[Open the worksheet](https://3fold-labs.github.io/ai-agent-rules/)** or download the attached blank HTML and open it in your browser. No account, server, API key, or MCP connection is required. Answers save in your browser only.
 
+A local plugin in this repository can walk through the same questions inside Claude Code, Cursor, Codex, or Gemini CLI and compile the same files on your machine. It is free, it makes no network calls, and the browser worksheet still needs no plugin, account, or key. See [Install the local plugin](./README.md#install-the-local-plugin).
+
 ## Disclaimer
 
 This worksheet and the policies and tool settings it produces record preferences. They do not control, supervise, or restrain any assistant, model, or third-party product, including Muse, Grok, ChatGPT, Claude, or any other agent. Nothing here guarantees that a bot will follow an ALLOW, ASK, or DENY choice, ask before acting, or refuse an action.

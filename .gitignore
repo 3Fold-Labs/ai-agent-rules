@@ -10,5 +10,8 @@ gemini-ai-agent-rules.toml
 cursor-permissions.json
 node_modules/
 
+# Demo compiler output checked in as golden files. The names match the export ignores above.
+!test/fixtures/plugin/**
+
 .local/
 .DS_Store
